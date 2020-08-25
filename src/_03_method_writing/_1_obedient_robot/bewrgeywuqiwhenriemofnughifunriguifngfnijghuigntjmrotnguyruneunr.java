@@ -1,23 +1,47 @@
 package _03_method_writing._1_obedient_robot;
 
+import java.awt.Color;
+
+import javax.swing.JOptionPane;
+
 import org.jointheleague.graphical.robot.Robot;
 
 public class bewrgeywuqiwhenriemofnughifunriguifngfnijghuigntjmrotnguyruneunr {
 	static Robot Dude = new Robot();
 public static void main(String[] args) {
-	Dude.setSpeed(1000);
-	
+	Dude.setSpeed(10000);
+	String GYUiio = JOptionPane.showInputDialog("which color do you whant");
+	if(GYUiio.equalsIgnoreCase("red")) {
+		Dude.setPenColor(Color.red);
+	}
+	else if(GYUiio.equalsIgnoreCase("blue")) {
+		Dude.setPenColor(Color.blue);
+	}
+	else if(GYUiio.equalsIgnoreCase("green")) {
+		Dude.setPenColor(Color.green);
+	}
+	else {
+		Dude.setRandomPenColor();
+	}
+	String ghT = JOptionPane.showInputDialog("which shape do you whant");
 	Dude.penDown();
-	drawTriangle();
-	Dude.penUp();
-	Dude.move(50);
-	Dude.penDown();
-	drawSquare();
-	Dude.penUp();
-	Dude.move(200);
-    Dude.penDown();
-	drawCircle();
-}	
+	if(ghT.equalsIgnoreCase("triangle")) {
+		drawTriangle();
+	}
+	else if(ghT.equalsIgnoreCase("square")) {
+		drawSquare();
+	}
+	else if(ghT.equalsIgnoreCase("circle")) {
+		drawCircle();
+	}
+	else{
+	JOptionPane.showMessageDialog(null,"Sorry we dont have that shape")	;
+	}
+Dude.hide();
+}
+
+
+
 
 
 private static void drawTriangle() {
